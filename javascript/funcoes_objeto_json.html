@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcoes_objeto_json</title>
+</head>
+<body>
+    <script>
+        function buscarCEP() {      // função que busca CEP
+            let cep = prompt("Qual CEP dejesa buscar ?");       // pergunta para o usuário o cep desejado
+            let url = "https://brasilapi.com.br/api/cep/v2/" + cep;     // utilizando 'brasilapi' de busca do cep, mais o 'cep fornecido' pelo usuário para montar a url
+
+            fetch(url)      // 'fetch' busca os dados de 'url'
+                .then(function(resposta) {
+                    resposta.json().then(function(dados) {     // função .json transforma os dados em objeto javascript
+                        console.log(dados);       // mostra a url 'criada' da busca na tela
+                        alert("Sua cidade é " + dados.city + "bairro " + dados.heighborhood + "na rua " + dados.street);        // mostrando um alerta com os dados da busca
+                    })
+                })
+                .catch(function(erro) {
+                    console.log("Ocorreu um erro ao buscar os dados", erro);
+                })
+
+        } 
+
+        buscarCEP();        // chamando a função
+    </script>
+</body>
+</html>
