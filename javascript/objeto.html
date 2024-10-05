@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    <h1>Criando objeto</h1>
+    <script>
+        let QuemSou = {     // 'objeto' 
+            "Nome": "Luis Henrique S. F.",      // 'Nome' é uma propriedade e armazenda uma string como valor
+            "profissional": ""      // propriedade iniçindo vazia
+            }
+
+            function profissional () {      // criando 'função' profissional
+            console.log ("FullStack!");     // função profissional imprime 'FullStack' no cosole
+            }
+
+            QuemSou.falar = profissional;       // armazenando funçao profissional no objeto QuemSou
+            QuemSou.falar();        // imprime no console.log
+    </script>
+</body>
+</html>
