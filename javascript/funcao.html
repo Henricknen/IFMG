@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>função</title>
+</head>
+<body>
+    <h1>Criando função</h1>
+    <script>
+        let num1 = 10,
+            num2 = 3,
+            nome = "Carlos";
+        
+        function multiplica() {     // funcão 'multiplica' está sendo definida no escopo 'global'
+            return num1 * num2;     // multiplica os valores de num1 e num2
+        }
+        console.log("Resultado da multiplicação:", multiplica());       
+        
+        function getScore() {       // função 'aninhada'
+            let num1 = 1,
+                num2 = 3;
+
+            function add() {
+                return nome + " fez " + (num1 + num2) + " pontos";
+            }
+            return add();
+        }
+        console.log(getScore());
+    </script>
+</body>
+</html>
