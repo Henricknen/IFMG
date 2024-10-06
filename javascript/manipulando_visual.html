@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Visual</title>
+</head>
+<body>
+    <h1>Digite seu nome:</h1>       <!-- elemento visual -->
+    <input id = "nome">     <!-- 'input' cria uma caixa de texto que permite digitar algo -->
+    <button onclick = "alertar()">Ok</button>       <!-- botão com evento de click, chamando função 'alertar' -->
+    <p id = "nomeUser">-</p>        <!-- elemento p' é fixo na tela do navegador -->
+    <script>
+        function alertar() {
+            let nome = document.getElementById("nome"). value;     // 'document' vai ao documento html e 'getElementById' pega elemento de 'id' nome, 'value' pega o valor digitado no 'input'
+            alert("Voçê se chama " + nome + "!");       // 'alert' mostra uma menssagem 'alerta' no navegador com elemento de id 'nome' digitado pelo usuário
+            document.getElementById("nomeUser"). innerHTML = "<b>O nome digitado foi: </b>" + nome;     // 'innerHTML' permite modificão do texto do elemento de id 'nomeUser'
+        }
+    </script>
+</body>
+</html>
