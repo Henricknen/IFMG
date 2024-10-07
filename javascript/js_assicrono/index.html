@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assicrono</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <label for="usuario_nome">Qual é o seu nome?</label>
+    <input id="usuario_nome" placeholder="Qual é o seu nome?"><br>      <!-- campos de texto -->
+
+    <label for="endereco_cep">Digite seu CEP</label>
+    <input id="endereco_cep" onfocusout="buscarCep()" placeholder="Digite seu CEP"><br>     <!-- 'onfucusout' é um evento que assim que o elemento 'linha' perde o foco chama a função 'buscarCep' -->
+
+    <label for="endereco_rua">Digite sua Rua</label>
+    <input id="endereco_rua" placeholder="Digite sua Rua"><br>
+
+    <label for="endereco_bairro">Digite seu Bairro</label>
+    <input id="endereco_bairro" placeholder="Digite seu Bairro"><br>
+
+    <label for="endereco_cidade">Digite sua Cidade</label>
+    <input id="endereco_cidade" placeholder="Digite sua Cidade"><br>
+
+    <label for="endereco_estado">Digite seu Estado</label>
+    <input id="endereco_estado" placeholder="Digite seu Estado"><br>
+
+    <script src="funcoes.js"></script>
+</body>
+</html>
